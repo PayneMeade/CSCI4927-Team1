@@ -1,12 +1,13 @@
 ﻿/* The sidebar menu */
 .sidebar {
-    height: 100%; /* 100% full-height */
+    height: 100%; /* 75% full-height */
+    margin: 125px 0px 0px 0px;
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* stay on top */
     top: 0;
     left: 0;
-    background-color: #1e1e1e; /* Visual Studio Dark-Mode Grey */
+    background-color: white; 
     overflow-x: hidden; /* disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.50s; /* 0.5 second transition effect to slide in the sidebar */
@@ -17,14 +18,14 @@
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: cyan;
+    color: #041e42;
     display: block;
     transition: 0.3s
 }
 
 /* When you mous over navigation links, then change their color */
 .sidebar a:hover {
-    color: #f1f1f1;
+    color: darkcyan;
 }
 
 /* Position and style the close button (top right corner) */
@@ -36,16 +37,6 @@
     margin-left: 50px;
 }
 
-/* The button used to open the sidebar */
-.openbtn {
-    font-size: 20px;
-    cursor: pointer;
-    background-color: #111;
-    color: darkcyan;
-    padding: 10px 15px;
-    border: none;
-}
-
 .openbtn:hover {
     background-color: #444;
 }
@@ -54,7 +45,6 @@
     to the right when you open the side navigation bar */
 #main {
     transition: margin-left .5s; /* this is if you want a transition effect */
-    padding: 20px;
 }
 
 @media screen and (max-height: 450px) {
