@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/sidebar.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/searchbar.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/StyleSheet1.css" asp-append-version="true" />
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
@@ -26,17 +27,17 @@
                 <a class="nav-link text-dark" asp-area="" asp-page="/Help"><i class="fa-solid fa-clipboard-question" style="color: #000000;"></i>Help</a>
             </div>
         </nav>
-        <div class="navbar navbar-expand-sm mb-3" style=" background-color: #e5dbff">
+        <div class="navbar navbar-expand-sm mb-3" style=" background-color: #F8F8F8; height: 150px;">
             <i class="fa-solid fa-magnifying-glass" style="color: #000000; margin: 0px 0px 0px 1100px;"></i>
             <input class="searchbar" type="text" style="background-color: #f3eeff" />
         </div>
     </header>
 
     <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">CSCI 5200</a>
-        <a href="#">CSCI 5230</a>
-        <a href="#">CSCI 4967</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="color: #002D62 !important">&times;</a>
+        <a href="#" style="color: #002D62 !important">CSCI 5200</a>
+        <a href="#" style="color: #002D62 !important">CSCI 5230</a>
+        <a href="#" style="color: #002D62 !important">CSCI 4967</a>
     </div>
 
 
@@ -50,10 +51,14 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - TEAM_HCI - <a asp-area="" asp-page="/Privacy">Privacy</a>
+    <footer class="border-top footer text-muted" style="background-color: #002D62 !important; height: 120px; color: #fff !important;">
+        <div class="text-center">
+            2023 Copyright. All rights reserved. 
+            <div class="float-end me-5">
+                <i class="fa-brands fa-facebook-f"></i> <i class="fa-brands fa-twitter"></i> <i class="fa-brands fa-square-instagram"></i>
+            </div>
         </div>
+         
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

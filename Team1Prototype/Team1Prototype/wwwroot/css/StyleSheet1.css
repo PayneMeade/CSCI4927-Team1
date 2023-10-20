@@ -1,0 +1,142 @@
+﻿﻿ /* The sidebar menu */
+.sidebar {
+    height: 100%; /* 100% full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* stay on top */
+    top: 0;
+    left: 0;
+    background-color: #1e1e1e; /* Visual Studio Dark-Mode Grey */
+    overflow-x: hidden; /* disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.50s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: cyan;
+    display: block;
+    transition: 0.3s
+}
+
+    /* When you mous over navigation links, then change their color */
+    .sidebar a:hover {
+        color: #f1f1f1;
+    }
+
+/*Text font to match home screen*/
+.h1.home {
+    font-size: 32px;
+    font-weight: 600;
+    font-family: Verdana;
+    text-align: justify;
+}
+
+/*Box for text on homepage*/
+
+.hometext {
+    width: 400px;
+    height: 117px;
+    top: -103px;
+    left: -804px;
+}
+
+
+/*Div for icons so they display properly*/
+.icons2 {
+    width: 242px;
+    margin: 5px;
+    float: left;
+    text-align: center;
+}
+
+grayboxleft.p {
+    font-family: Verdana;
+    font-weight: 200;
+}
+
+
+
+/*Grey box for homepage*/
+.grayboxleft {
+    width: 242px;
+    height: 178px;
+    top: 822px;
+    left: 123px;
+    border-radius: 11px;
+    background-color: #F1F1F1; /* Gray */
+    box-shadow: 0px 2px 4px 0px #00000040;
+    padding: 20px;
+}
+
+    .grayboxleft.a:link {
+        color: #8E6B05;
+    }
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*Button for homepage*/
+.button {
+    background-color: #FCC52D; /* Yellow */
+    border: none;
+    color: Black;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Verdana;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 58px;
+    width: 190px;
+    height: 61px;
+    box-shadow: 6px 6px 4px 0px #00000040;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: darkcyan;
+    padding: 10px 15px;
+    border: none;
+}
+
+    .openbtn:hover {
+        background-color: #444;
+    }
+
+/* Style page content - use this if you want to push the page content
+    to the right when you open the side navigation bar */
+#main {
+    transition: margin-left .5s; /* this is if you want a transition effect */
+    padding: 20px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+
+        .sidebar a {
+            font-size: 18px;
+        }
+}
