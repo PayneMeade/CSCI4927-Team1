@@ -51,8 +51,7 @@
     width: 242px;
     margin: 5px;
     float: left;
-    align-items:center;
-    justify-content:center;
+    text-align: center;
 }
 
 grayboxleft.p{
@@ -60,6 +59,8 @@ grayboxleft.p{
     font-weight:200;
 
 }
+
+
 
 /*Grey box for homepage*/
 .grayboxleft {
@@ -70,7 +71,18 @@ grayboxleft.p{
     border-radius: 11px;
     background-color: #F1F1F1; /* Gray */
     box-shadow: 0px 2px 4px 0px #00000040;
+
+    padding:20px;
 }
+.grayboxleft.a:link {
+    color: #8E6B05;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
 
 /*Button for homepage*/
 .button {
