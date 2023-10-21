@@ -22,8 +22,8 @@
                 <i class="fa-solid fa-ellipsis-vertical" style="color: #000000;"></i>
                 <img src="icons/ETSU.png" style="margin: 0px 0px 0px 20px;">
 
-                <button class="nav-link text-dark" asp-area="" onclick="openNav()" style="margin: 0px 0px 0px 600px; border: none; background: white;">Courses</button>
-                <a class="nav-link text-dark" asp-area="" asp-page="/Index">Instructors<i class="fa-solid fa-person-chalkboard" style="color: #000000;"></i></a>
+                <button class="nav-link text-dark" asp-area="" onclick="openCourseSidebar()" style="margin: 0px 0px 0px 600px; border: none; background: white;">Courses</button>
+                <button class="nav-link text-dark" asp-area="" onclick="openInstructorSidebar()" style="border: none; background: white;">Instructors<i class="fa-solid fa-person-chalkboard" style="color: #000000;"></i></button>
                 <a class="nav-link text-dark" asp-area="" asp-page="/Help"><i class="fa-solid fa-clipboard-question" style="color: #000000;"></i>Help</a>
             </div>
         </nav>
@@ -33,13 +33,19 @@
         </div>
     </header>
 
-    <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="color: #002D62 !important">&times;</a>
+    <div id="courseSidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeCourseSidebar()" style="color: #002D62 !important">&times;</a>
         <a href="#" style="color: #002D62 !important">CSCI 5200</a>
         <a href="#" style="color: #002D62 !important">CSCI 5230</a>
         <a href="#" style="color: #002D62 !important">CSCI 4967</a>
     </div>
 
+    <div id="instructorSidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeInstructorSidebar()" style="color: #002D62 !important">&times;</a>
+        <a href="#" style="color: #002D62 !important">Tahsin Rezwana</a>
+        <a href="#" style="color: #002D62 !important">Jeff Roach</a>
+        <a href="#" style="color: #002D62 !important">Phil Pfeiffer</a>
+    </div>
 
     <div id="main">
         <img src="images/gold-rectangle.png" style="float: left;" />
