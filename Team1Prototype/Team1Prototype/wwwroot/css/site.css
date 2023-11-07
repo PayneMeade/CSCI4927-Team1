@@ -13,7 +13,15 @@ html {
   min-height: 100%;
 }
 
+
 body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
+}
+
+footer {
+    height: 120px;
+    z-index: 1;
+    background-color: #002D62 !important;
+    color: #fff !important;
 }
