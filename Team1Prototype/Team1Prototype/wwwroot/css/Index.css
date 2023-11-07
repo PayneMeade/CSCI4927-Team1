@@ -1,0 +1,75 @@
+﻿/*Text font to match home screen*/
+.h1.home {
+    font-size: 32px;
+    font-weight: 600;
+    font-family: Verdana;
+    text-align: justify;
+}
+
+/*Box for text on homepage*/
+.hometext {
+    width: 400px;
+    height: 117px;
+    top: -103px;
+    left: -804px;
+}
+
+
+/*Div for icons so they display properly*/
+.icons2 {
+    width: 242px;
+    margin: 5px;
+    float: left;
+    text-align: center;
+}
+
+grayboxleft.p {
+    font-family: Verdana;
+    font-weight: 200;
+}
+
+
+/*Grey box for homepage*/
+.grayboxleft {
+    width: 242px;
+    height: 178px;
+    top: 822px;
+    left: 123px;
+    border-radius: 11px;
+    background-color: #F1F1F1; /* Gray */
+    box-shadow: 0px 2px 4px 0px #00000040;
+    padding: 20px;
+}
+
+.grayboxleft.a:link {
+    color: #8E6B05;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*Button for homepage*/
+.button {
+    background-color: #FCC52D; /* Yellow */
+    border: none;
+    color: Black;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Verdana;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 58px;
+    width: 190px;
+    height: 61px;
+    box-shadow: 6px 6px 4px 0px #00000040;
+}
+
+.center {
+    margin-left: 15%;
+}
