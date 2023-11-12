@@ -12,6 +12,11 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" />
+    <style>
+        .modal-profile-pic {
+            width: 40%;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -34,16 +39,18 @@
 
     <div id="courseSidebar" class="sidebar" style="visibility: visible;">
         <a href="javascript:void(0)" class="closebtn" onclick="closeCourseSidebar()">&times;</a>
-        <a href="#">CSCI 5200</a>
-        <a href="#">CSCI 5230</a>
-        <a href="#">CSCI 4967</a>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#modal4417">CSCI 4417</a>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#modal4967">CSCI 4967</a>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#modal5200">CSCI 5200</a>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#modal5230">CSCI 5230</a>
     </div>
 
     <div id="instructorSidebar" class="sidebar" style="visibility: hidden;">
         <a href="javascript:void(0)" class="closebtn" onclick="closeInstructorSidebar()">&times;</a>
-        <a href="#">Tahsin Rezwana</a>
-        <a href="#">Jeff Roach</a>
-        <a href="#">Phil Pfeiffer</a>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#rezwanaModal">Tahsin Rezwana</a>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#ramseyModal">Jack Ramsey</a>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#roachModal">Jeff Roach</a>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#pfeifferModal">Phil Pfeiffer</a>
     </div>
 
     <div id="mainContent" class="container">
@@ -67,5 +74,368 @@
 
 
     @await RenderSectionAsync("Scripts", required: false)
+
+    <!-- START COURSE MODALS -->
+    <div class="modal fade" id="modal5200" tabindex="-1" aria-labelledby="5200ModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header" style="display: flex; align-items: center; justify-content: space-between;">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">CSCI 5200 - Software Systems Engineering</h1>
+            <div style="display: flex; align-items: center;">
+                <img src="icons/ETSU.png" class="me-2" style="margin-left: auto!important;">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+          </div>
+          <div class="modal-body" style="font-family: sans-serif; font-weight: normal!important;">
+              <div class="text-center">
+                  <strong>Course Information</strong>
+              </div>
+              <strong>Prerequisites:</strong> Admission to the computer science master’s degree program.
+              <br />
+              <br />
+              <strong>Description: </strong>
+              Permission of the instructor must be obtained for non-computer science graduate students. 
+              This course exposes students to the development of software systems at the very highest level. 
+              It introduces the system aspect of development and the related trade-offs required when software and hardware are developed together. 
+              An overview of software development life cycles is presented. 
+              The course exposes students to requirements analysis techniques to develop a system from those requirements.
+              <br />
+              <br />
+              <strong>Languages: </strong>
+              <br />
+              <br />
+              <strong>Useful info: </strong>
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal4417" tabindex="-1" aria-labelledby="Modal4417Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+        <div class="modal-header" style="display: flex; align-items: center; justify-content: space-between;">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">CSCI 5200 - Software Systems Engineering</h1>
+            <div style="display: flex; align-items: center;">
+                <img src="icons/ETSU.png" class="me-2" style="margin-left: auto!important;">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+          </div>
+          <div class="modal-body" style="font-family: sans-serif; font-weight: normal!important;">
+              <div class="text-center">
+                  <strong>Course Information</strong>
+              </div>
+              <br />
+              <strong>Prerequisites:</strong> C- or better in CSCI 2150 and C- or better in CSCI 2200 and C- or better in CSCI 3400.
+              <br />
+              <br />
+              <strong>Description: </strong>
+              A survey of concerns related to management and design of computing systems and services. 
+              Topics include the practice of system administration, overview of network operating systems, 
+              best practices for system administration, fundamentals of Unix and Windows system administration, 
+              network design, and remote network access. The course will provide hands-on experience with setting 
+              up and administering Unix and Windows network operating systems.
+              <br />
+              <br />
+              <strong>Languages: </strong>bash, powershell, c#
+              <br />
+              <br />
+              <strong>Useful info: </strong>This course utilizes Linux and Windows servers along with learning how to automate systems administrator tasks with scripts.
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal5230" tabindex="-1" aria-labelledby="Modal5230Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+                   <div class="modal-header" style="display: flex; align-items: center; justify-content: space-between;">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">CSCI 5200 - Software Systems Engineering</h1>
+            <div style="display: flex; align-items: center;">
+                <img src="icons/ETSU.png" class="me-2" style="margin-left: auto!important;">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+          </div>
+          <div class="modal-body" style="font-family: sans-serif; font-weight: normal!important;">
+              <div class="text-center">
+                  <strong>Course Information</strong>
+              </div>
+              <br />
+              <strong>Prerequisites:</strong> 
+              <br />
+              <br />
+              <strong>Description: </strong>
+             
+              <br />
+              <br />
+              <strong>Languages: </strong>
+              <br />
+              <br />
+              <strong>Useful info: </strong>
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal4967" tabindex="-1" aria-labelledby="Modal4967Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+                    <div class="modal-header" style="display: flex; align-items: center; justify-content: space-between;">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">CSCI 5200 - Software Systems Engineering</h1>
+            <div style="display: flex; align-items: center;">
+                <img src="icons/ETSU.png" class="me-2" style="margin-left: auto!important;">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+          </div>
+          <div class="modal-body" style="font-family: sans-serif; font-weight: normal!important;">
+              <div class="text-center">
+                  <strong>Course Information</strong>
+              </div>
+              <br />
+              <strong>Prerequisites:</strong> 
+              <br />
+              <br />
+              <strong>Description: </strong>
+             
+              <br />
+              <br />
+              <strong>Languages: </strong>
+              <br />
+              <br />
+              <strong>Useful info: </strong>
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END COURSE MODALS -->
+
+    <!-- START INSTRUCTOR MODALS -->
+    <div class="modal fade" id="rezwanaModal" tabindex="-1" aria-labelledby="rezwanaModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header" style="display: flex; align-items: center; justify-content: space-between;">
+
+                <h1 class="modal-title fs-5" id="rezwanaModalLabel">Tahsin Rezwana</h1>
+
+                <div style="display: flex; align-items: center;">
+                    <img src="icons/ETSU.png" class="me-2" style="margin-left: auto!important;">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+          </div>
+          <div class="modal-body" style="font-family: sans-serif; font-weight: normal!important;">
+              <div class="text-center">
+                  <strong>Instructor Information</strong>
+              </div>
+              <br />
+              <div class="row">
+                  <div class="col-sm-6">
+                      <strong>Picture: </strong>
+                      <img src="images/rezwana.jpg" class="img-thumbnail ms-3 modal-profile-pic" />
+                  </div>
+                  <div class="col-sm-6">
+                      <strong>Bio: </strong>
+                       Tahsin Rezwana is highly recommended for teaching 
+                        HCI and excells in computer science. 
+                  </div>
+              </div>
+              <br />
+              <br />
+              <strong>Teaches Courses:</strong> Human Computer Interaction
+              <br />
+              <br />
+              <strong>Days Available:</strong> Mon and Fri
+              <br />
+              <br />
+              <strong>Email:</strong> rezwana@etsu.edu
+              <br />
+              <br />
+              <strong>Office Phone:</strong> 423-439-5385
+              <br />
+              <br />
+              <div class="row">
+                  <div class="col-sm-6">
+                      <strong>Office Location:</strong> 479 Nicks Hall
+                  </div>
+                  <div class="col-sm-6">
+                      <strong>Office Hours Available:</strong> 12:00am - 11:59pm
+                  </div>
+              </div>
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+        <div class="modal fade" id="ramseyModal" tabindex="-1" aria-labelledby="ramseyModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header" style="display: flex; align-items: center; justify-content: space-between;">
+
+                <h1 class="modal-title fs-5" id="ramseyModalLabel">Jack Ramsey</h1>
+
+                <div style="display: flex; align-items: center;">
+                    <img src="icons/ETSU.png" class="me-2" style="margin-left: auto!important;">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+          </div>
+          <div class="modal-body" style="font-family: sans-serif; font-weight: normal!important;">
+              <div class="text-center">
+                  <strong>Instructor Information</strong>
+              </div>
+              <br />
+              <div class="row">
+                  <div class="col-sm-6">
+                      <strong>Picture: </strong>
+                      <img src="images/ramsey.jpg" class="img-thumbnail ms-3 modal-profile-pic" />
+                  </div>
+                  <div class="col-sm-6">
+                      <strong>Bio: </strong>
+                       Jack Ramsey excels in automation and bash/powershell scripting.
+                  </div>
+              </div>
+              <br />
+              <br />
+              <strong>Teaches Courses:</strong> Intro to Systems Administrator, Unix Fundamentals
+              <br />
+              <br />
+              <strong>Days Available:</strong> Mon and Fri
+              <br />
+              <br />
+              <strong>Email:</strong> ramseyjw@etsu.edu
+              <br />
+              <br />
+              <strong>Office Phone:</strong> 423-439-5385
+              <br />
+              <br />
+              <div class="row">
+                  <div class="col-sm-6">
+                      <strong>Office Location:</strong> 479 Nicks Hall
+                  </div>
+                  <div class="col-sm-6">
+                      <strong>Office Hours Available:</strong> 12:00am - 11:59pm
+                  </div>
+              </div>
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="roachModal" tabindex="-1" aria-labelledby="roachModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header" style="display: flex; align-items: center; justify-content: space-between;">
+
+                <h1 class="modal-title fs-5" id="roachModalLabel">Jeff Roach, Ph.D.</h1>
+
+                <div style="display: flex; align-items: center;">
+                    <img src="icons/ETSU.png" class="me-2" style="margin-left: auto!important;">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+          </div>
+          <div class="modal-body" style="font-family: sans-serif; font-weight: normal!important;">
+              <div class="text-center">
+                  <strong>Instructor Information</strong>
+              </div>
+              <br />
+              <div class="row">
+                  <div class="col-sm-6">
+                      <strong>Picture: </strong>
+                      <img src="images/roach.jpg" class="img-thumbnail ms-3 modal-profile-pic" />
+                  </div>
+                  <div class="col-sm-6">
+                      <strong>Bio: </strong>
+                       Jeff Roach...
+                  </div>
+              </div>
+              <br />
+              <br />
+              <strong>Teaches Courses:</strong>
+              <br />
+              <br />
+              <strong>Days Available:</strong> Mon and Fri
+              <br />
+              <br />
+              <strong>Email:</strong> roach@etsu.edu
+              <br />
+              <br />
+              <strong>Office Phone:</strong> 423-439-5385
+              <br />
+              <br />
+              <div class="row">
+                  <div class="col-sm-6">
+                      <strong>Office Location:</strong> 479 Nicks Hall
+                  </div>
+                  <div class="col-sm-6">
+                      <strong>Office Hours Available:</strong> 12:00am - 11:59pm
+                  </div>
+              </div>
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+        <div class="modal fade" id="pfeifferModal" tabindex="-1" aria-labelledby="pfeifferModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header" style="display: flex; align-items: center; justify-content: space-between;">
+
+                <h1 class="modal-title fs-5" id="pfeifferModalLabel">Phil Pfeiffer, Ph.D.</h1>
+
+                <div style="display: flex; align-items: center;">
+                    <img src="icons/ETSU.png" class="me-2" style="margin-left: auto!important;">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+          </div>
+          <div class="modal-body" style="font-family: sans-serif; font-weight: normal!important;">
+              <div class="text-center">
+                  <strong>Instructor Information</strong>
+              </div>
+              <br />
+              <div class="row">
+                  <div class="col-sm-6">
+                      <strong>Picture: </strong>
+                      <img src="images/pfeiffer.jpg" class="img-thumbnail ms-3 modal-profile-pic" />
+                  </div>
+                  <div class="col-sm-6">
+                      <strong>Bio: </strong>
+                       Phil Pfeiffer...
+                  </div>
+              </div>
+              <br />
+              <br />
+              <strong>Teaches Courses:</strong>
+              <br />
+              <br />
+              <strong>Days Available:</strong> Mon and Fri
+              <br />
+              <br />
+              <strong>Email:</strong> phil@etsu.edu
+              <br />
+              <br />
+              <strong>Office Phone:</strong> 423-439-5385
+              <br />
+              <br />
+              <div class="row">
+                  <div class="col-sm-6">
+                      <strong>Office Location:</strong> 479 Nicks Hall
+                  </div>
+                  <div class="col-sm-6">
+                      <strong>Office Hours Available:</strong> 12:00am - 11:59pm
+                  </div>
+              </div>
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END INSTRUCTOR MODALS -->
+
 </body>
 </html>
