@@ -40,7 +40,7 @@
     <div id="courseSidebar" class="sidebar" style="visibility: visible;">
         <a href="javascript:void(0)" class="closebtn" onclick="closeCourseSidebar()">&times;</a>
         <a href="#" data-bs-toggle="modal" data-bs-target="#modal4417">CSCI 4417</a>
-        <a href="#" data-bs-toggle="modal" data-bs-target="#modal4967">CSCI 4967</a>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#modal4967">CSCI 4927</a>
         <a href="#" data-bs-toggle="modal" data-bs-target="#modal5200">CSCI 5200</a>
         <a href="#" data-bs-toggle="modal" data-bs-target="#modal5230">CSCI 5230</a>
     </div>
@@ -76,6 +76,80 @@
     @await RenderSectionAsync("Scripts", required: false)
 
     <!-- START COURSE MODALS -->
+    <!-- modal4417 -->
+    <div class="modal fade" id="modal4417" tabindex="-1" aria-labelledby="Modal4417Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+        <div class="modal-header" style="display: flex; align-items: center; justify-content: space-between;">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">CSCI 4417 - Introduction to System Administration</h1>
+            <div style="display: flex; align-items: center;">
+                <img src="icons/ETSU.png" class="me-2" style="margin-left: auto!important;">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+          </div>
+          <div class="modal-body" style="font-family: sans-serif; font-weight: normal!important;">
+              <div class="text-center">
+                  <strong>Course Information</strong>
+              </div>
+              <br />
+                    <strong>Prerequisites:</strong> C- or better in CSCI 2150 and C- or better in CSCI 2200 and C- or better in CSCI 3400.
+              <br />
+              <br />
+              <strong>Description: </strong>
+              A survey of concerns related to management and design of computing systems and services. 
+              Topics include the practice of system administration, overview of network operating systems, 
+              best practices for system administration, fundamentals of Unix and Windows system administration, 
+              network design, and remote network access. The course will provide hands-on experience with setting 
+              up and administering Unix and Windows network operating systems.
+              <br />
+              <br />
+              <strong>Languages: </strong>bash, powershell, C#
+              <br />
+              <br />
+              <strong>Useful info: </strong>This course utilizes Linux and Windows servers along with learning how to automate systems administrator tasks with scripts.
+          </div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+    <!-- modal4927 -->
+    <div class="modal fade" id="modal4967" tabindex="-1" aria-labelledby="Modal4967Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+                    <div class="modal-header" style="display: flex; align-items: center; justify-content: space-between;">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">CSCI 4927 - Human Computer Interaction</h1>
+            <div style="display: flex; align-items: center;">
+                <img src="icons/ETSU.png" class="me-2" style="margin-left: auto!important;">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+          </div>
+          <div class="modal-body" style="font-family: sans-serif; font-weight: normal!important;">
+              <div class="text-center">
+                  <strong>Course Information</strong>
+              </div>
+              <br />
+                    <strong>Prerequisites:</strong> C- or better in CSCI 4250.
+              <br />
+              <br />
+              <strong>Description: </strong>
+              Assesses and improves the user experience between humans and electronic devices, and designs systems
+              that enable individuals to make more effective use of computers by creating better user interfaces.
+
+              Dual Listed with CSCI 5927
+              <br />
+              <br />
+              <strong>Languages: </strong> C#, JavaScript
+              <br />
+              <br />
+              <strong>Useful info: </strong>
+              This course helps future web-developers understand User Interface/Experience concepts to help better 
+              their own websites for all people.
+          </div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+    <!-- modal5200 -->
     <div class="modal fade" id="modal5200" tabindex="-1" aria-labelledby="5200ModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
@@ -106,47 +180,11 @@
               <br />
               <strong>Useful info: </strong>
           </div>
-          <div class="modal-footer">
-          </div>
+          <div class="modal-footer"></div>
         </div>
       </div>
     </div>
-    <div class="modal fade" id="modal4417" tabindex="-1" aria-labelledby="Modal4417Label" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-        <div class="modal-header" style="display: flex; align-items: center; justify-content: space-between;">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">CSCI 5200 - Software Systems Engineering</h1>
-            <div style="display: flex; align-items: center;">
-                <img src="icons/ETSU.png" class="me-2" style="margin-left: auto!important;">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-          </div>
-          <div class="modal-body" style="font-family: sans-serif; font-weight: normal!important;">
-              <div class="text-center">
-                  <strong>Course Information</strong>
-              </div>
-              <br />
-              <strong>Prerequisites:</strong> C- or better in CSCI 2150 and C- or better in CSCI 2200 and C- or better in CSCI 3400.
-              <br />
-              <br />
-              <strong>Description: </strong>
-              A survey of concerns related to management and design of computing systems and services. 
-              Topics include the practice of system administration, overview of network operating systems, 
-              best practices for system administration, fundamentals of Unix and Windows system administration, 
-              network design, and remote network access. The course will provide hands-on experience with setting 
-              up and administering Unix and Windows network operating systems.
-              <br />
-              <br />
-              <strong>Languages: </strong>bash, powershell, c#
-              <br />
-              <br />
-              <strong>Useful info: </strong>This course utilizes Linux and Windows servers along with learning how to automate systems administrator tasks with scripts.
-          </div>
-          <div class="modal-footer">
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- modal5230 -->
     <div class="modal fade" id="modal5230" tabindex="-1" aria-labelledby="Modal5230Label" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
@@ -174,46 +212,14 @@
               <br />
               <strong>Useful info: </strong>
           </div>
-          <div class="modal-footer">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="modal4967" tabindex="-1" aria-labelledby="Modal4967Label" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-                    <div class="modal-header" style="display: flex; align-items: center; justify-content: space-between;">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">CSCI 5200 - Software Systems Engineering</h1>
-            <div style="display: flex; align-items: center;">
-                <img src="icons/ETSU.png" class="me-2" style="margin-left: auto!important;">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-          </div>
-          <div class="modal-body" style="font-family: sans-serif; font-weight: normal!important;">
-              <div class="text-center">
-                  <strong>Course Information</strong>
-              </div>
-              <br />
-              <strong>Prerequisites:</strong> 
-              <br />
-              <br />
-              <strong>Description: </strong>
-             
-              <br />
-              <br />
-              <strong>Languages: </strong>
-              <br />
-              <br />
-              <strong>Useful info: </strong>
-          </div>
-          <div class="modal-footer">
-          </div>
+          <div class="modal-footer"></div>
         </div>
       </div>
     </div>
     <!-- END COURSE MODALS -->
 
     <!-- START INSTRUCTOR MODALS -->
+    <!-- rezwanaModal -->
     <div class="modal fade" id="rezwanaModal" tabindex="-1" aria-labelledby="rezwanaModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
@@ -265,12 +271,12 @@
                   </div>
               </div>
           </div>
-          <div class="modal-footer">
-          </div>
+          <div class="modal-footer"></div>
         </div>
       </div>
     </div>
-        <div class="modal fade" id="ramseyModal" tabindex="-1" aria-labelledby="ramseyModalLabel" aria-hidden="true">
+    <!-- ramseyModal -->
+    <div class="modal fade" id="ramseyModal" tabindex="-1" aria-labelledby="ramseyModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
           <div class="modal-header" style="display: flex; align-items: center; justify-content: space-between;">
@@ -320,11 +326,11 @@
                   </div>
               </div>
           </div>
-          <div class="modal-footer">
-          </div>
+          <div class="modal-footer"></div>
         </div>
       </div>
     </div>
+    <!-- roachModal -->
     <div class="modal fade" id="roachModal" tabindex="-1" aria-labelledby="roachModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
@@ -375,12 +381,12 @@
                   </div>
               </div>
           </div>
-          <div class="modal-footer">
-          </div>
+          <div class="modal-footer"></div>
         </div>
       </div>
     </div>
-        <div class="modal fade" id="pfeifferModal" tabindex="-1" aria-labelledby="pfeifferModalLabel" aria-hidden="true">
+    <!-- peifferModal -->
+    <div class="modal fade" id="pfeifferModal" tabindex="-1" aria-labelledby="pfeifferModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
           <div class="modal-header" style="display: flex; align-items: center; justify-content: space-between;">
@@ -430,8 +436,7 @@
                   </div>
               </div>
           </div>
-          <div class="modal-footer">
-          </div>
+          <div class="modal-footer"></div>
         </div>
       </div>
     </div>
