@@ -33,7 +33,8 @@
         </nav>
         <div class="navbar navbar-expand-sm mb-3" style=" background-color: #F8F8F8; height: 50px;">
             <i class="fa-solid fa-magnifying-glass" style="color: #000000; margin: 0px 0px 0px 1100px;"></i>
-            <input class="searchbar" type="text" style="background-color: #f3eeff" />
+            <input class="searchbar" id="searchBar" type="text" style="background-color: #f3eeff" />
+            <div id="searchFeedback" class="ms-2" style="color: red;"></div>
         </div>
     </header>
 
@@ -189,7 +190,7 @@
       <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
                    <div class="modal-header" style="display: flex; align-items: center; justify-content: space-between;">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">CSCI 5200 - Software Systems Engineering</h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel">CSCI 5230 - Software Systems Engineering</h1>
             <div style="display: flex; align-items: center;">
                 <img src="icons/ETSU.png" class="me-2" style="margin-left: auto!important;">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -441,6 +442,70 @@
       </div>
     </div>
     <!-- END INSTRUCTOR MODALS -->
+<script>
+document.getElementById('searchBar').addEventListener('keypress', function(e) {
+    let feedbackElement = document.getElementById('searchFeedback');
+    feedbackElement.textContent = ''; // Clear previous feedback
 
+    if (e.key === 'Enter') {
+        let searchQuery = e.target.value.trim().toLowerCase();
+        
+        // Execute search only if there's a query
+        if (searchQuery) {
+            let foundMatch = searchAndOpenModal(searchQuery, 'courseSidebar') || 
+                             searchAndOpenModal(searchQuery, 'instructorSidebar'); // Assuming there's an instructors sidebar
+
+            if (!foundMatch) {
+                feedbackElement.textContent = 'No matching course or instructor found.';
+            }
+        } else {
+            feedbackElement.textContent = 'Please enter a search term.';
+        }
+    }
+});
+
+function searchAndOpenModal(searchQuery, sidebarId) {
+    let sidebar = document.getElementById(sidebarId);
+    let links = sidebar.getElementsByTagName('a');
+    let exactMatch = null;
+    let closestMatch = null;
+    let closestMatchDistance = Infinity;
+
+    // Check for an exact match first
+    for (let link of links) {
+        if (link.textContent.trim().toLowerCase() === searchQuery) {
+            exactMatch = link;
+            break;
+        }
+    }
+
+    // If an exact match is found, return it
+    if (exactMatch) {
+        exactMatch.click();
+        return true;
+    }
+
+    // If no exact match, find the closest match
+    for (let link of links) {
+        if (link.textContent.toLowerCase().includes(searchQuery)) {
+            let distance = Math.abs(link.textContent.length - searchQuery.length);
+            if (distance < closestMatchDistance) {
+                closestMatchDistance = distance;
+                closestMatch = link;
+            }
+        }
+    }
+
+    if (closestMatch) {
+        closestMatch.click();
+        return true;
+    }
+    return false;
+}
+
+
+
+
+</script>
 </body>
 </html>
