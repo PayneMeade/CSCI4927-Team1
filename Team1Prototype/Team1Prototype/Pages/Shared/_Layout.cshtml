@@ -33,7 +33,7 @@
         </nav>
         <div class="navbar navbar-expand-sm mb-3" style=" background-color: #F8F8F8; height: 50px;">
             <i class="fa-solid fa-magnifying-glass" style="color: #000000; margin: 0px 0px 0px 1100px;"></i>
-            <input class="searchbar" type="text" style="background-color: #f3eeff" />
+            <input class="searchbar" id="searchBar" type="text" style="background-color: #f3eeff" />
         </div>
     </header>
 
@@ -441,6 +441,42 @@
       </div>
     </div>
     <!-- END INSTRUCTOR MODALS -->
+<script>
+document.getElementById('searchBar').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        let searchQuery = e.target.value.trim().toLowerCase();
+        
+        // Execute search only if there's a query
+        if (searchQuery) {
+            searchAndOpenModal(searchQuery, 'courseSidebar');
+            searchAndOpenModal(searchQuery, 'instructorSidebar'); // Assuming there's an instructors sidebar
+        }
+    }
+});
 
+function searchAndOpenModal(searchQuery, sidebarId) {
+    let sidebar = document.getElementById(sidebarId);
+    let links = sidebar.getElementsByTagName('a');
+    let closestMatch = null;
+    let closestMatchDistance = Infinity;
+
+    for (let link of links) {
+        if (link.textContent.toLowerCase().includes(searchQuery)) {
+            let distance = Math.abs(link.textContent.length - searchQuery.length);
+            if (distance < closestMatchDistance) {
+                closestMatchDistance = distance;
+                closestMatch = link;
+            }
+        }
+    }
+
+    if (closestMatch) {
+        // Simulate a click to open the modal
+        closestMatch.click();
+    }
+}
+
+
+</script>
 </body>
 </html>
