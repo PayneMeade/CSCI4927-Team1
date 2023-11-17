@@ -16,6 +16,9 @@
         .modal-profile-pic {
             width: 40%;
         }
+        .dropdown-toggle::after {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -23,8 +26,20 @@
         <nav class="navbar navbar-expand-sm box-shadow mb-3">
             <div class="container">
                 <a class="home-icon" asp-area="" asp-page="/Index"><i class="fa-solid fa-house" style="color: #000000; margin: 0px 20px 0px 0px;"></i></a>
-                <i class="fa-solid fa-ellipsis-vertical" style="color: #000000;"></i>
-                <img src="icons/ETSU.png" style="margin: 0px 0px 0px 20px;">
+            <!-- Dropdown menu for ETSU links -->
+                <div class="dropdown">
+                    <i class="fa-solid fa-ellipsis-vertical dropdown-toggle" style="color: #000000; cursor: pointer;" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                    <ul class="dropdown-menu" style="margin-top: 0;">
+                        <li><a class="dropdown-item" href="https://www.etsu.edu" target="_blank">ETSU</a></li>
+                        <li><a class="dropdown-item" href="https://goldlink.etsu.edu" target="_blank">ETSU Goldlink</a></li>
+                        <li><a class="dropdown-item" href="https://www.etsu.edu/cbat/computing/undergraduate_programs/default.php" target="_blank">ETSU CSCI Concentrations</a></li>
+                    </ul>
+                </div>
+
+                <a href="/" style="text-decoration: none;">
+                    <img src="icons/ETSU.png" style="margin: 0px 0px 0px 20px;">
+                </a>
+                
 
                 <button class="nav-link text-dark" asp-area="" onclick="openCourseSidebar()" style="margin: 0px 0px 0px 600px; border: none; background: white;">Courses</button>
                 <button class="nav-link text-dark" asp-area="" onclick="openInstructorSidebar()" style="border: none; background: white;">Instructors<i class="fa-solid fa-person-chalkboard" style="color: #000000;"></i></button>
@@ -61,6 +76,10 @@
     </div>
 
     <footer class="border-top text-muted footer">
+        <div class="float-start ms-5 text-white">
+            Email: team1@etsu.edu
+            Phone: 555-555-5555
+        </div>
         <div class="text-center text-white">
             2023 Copyright. All rights reserved. 
             <div class="float-end me-5">
